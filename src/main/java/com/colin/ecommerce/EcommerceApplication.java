@@ -7,7 +7,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EcommerceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EcommerceApplication.class, args);
+        //SpringApplication.run(EcommerceApplication.class, args);
+
+        //Constructor injection line below
+        //var orderService = new OrderService(new PaypalPaymentService());
+
+        var orderService = new OrderService();
+        orderService.setPaymentService(new PaypalPaymentService());
+        orderService.placeOrder();
     }
 
 }
