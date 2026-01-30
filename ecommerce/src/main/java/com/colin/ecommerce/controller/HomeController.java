@@ -1,4 +1,4 @@
-package com.colin.ecommerce;
+package com.colin.ecommerce.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
